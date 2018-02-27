@@ -1,44 +1,45 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-                <section data-markdown>
-                    <textarea data-template>
-                        ## An Introduction to Something...
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-                        A paragraph with some text and a [link](http://hakim.se).
-                    </textarea>
-                </section>
-			</div>
-		</div>
-		<script src="js/reveal.js"></script>
-		<script>
-            Reveal.initialize({
-                // Display presentation control arrows
-	            controls: true,
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
 
-                // Help the user learn the controls by providing hints, for example by
-	            // bouncing the down arrow when they first encounter a vertical slide
-	            controlsTutorial: true,
+class: center, middle
 
-                // Determines where controls appear, "edges" or "bottom-right"
-	            controlsLayout: 'bottom-right', 
+# Title
 
-                // Visibility rule for backwards navigation arrows; "faded", "hidden"
-	            // or "visible"
-	            controlsBackArrows: 'faded',
+---
 
-                // Display a presentation progress bar
-	            progress: true
-            }
-            
-            );
-		</script>
-	</body>
+# Agenda
+
+1. Introduction
+2. Deep-dive
+3. ...
+
+---
+
+# Introduction
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
 </html>
