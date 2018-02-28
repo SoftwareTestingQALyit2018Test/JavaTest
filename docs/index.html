@@ -82,6 +82,57 @@ public class helloWorld{
 A rather contrived example of a system under test...
     
 ---
+# The Unit Testing Code
+And then we create the unit testing code in the same directory 
+as the SUT:
+
+```shell
+$ vim helloWorldUnitTest.java
+...
+$
+```
+
+---
+
+# The Unit Testing Code
+
+```java
+import org.junit.*;
+import static org.junit.Assert.*;
+import java.util.*;
+
+public class helloWorldUnitTest{
+
+    @Test
+    public void testSayHello(){
+        helloWorld helloTest = new helloWorld();
+        assertEquals("Hello", helloTest.sayHello());
+    }
+
+    @Test
+    public void testSayGoodbye(){
+        helloWorld helloTest = new helloWorld();
+        assertEquals("Goodbye", helloTest.sayGoodbye());
+    }	
+    
+    @Test
+    public void testSayName(){
+        String name = "Chester";
+        helloWorld helloTest = new helloWorld();
+        assertEquals(name, helloTest.sayName(name));
+    }
+}
+```
+---
+# Commentary on the Testing Code
+
+Line by line:
+1. Import of the java.unit module.
+2. Import of the static assert method.
+
+---
+    
+    
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
