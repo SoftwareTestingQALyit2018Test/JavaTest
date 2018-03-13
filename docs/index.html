@@ -49,6 +49,7 @@ public class helloWorld{
     }
 }
 ```
+<<<<<<< HEAD
 
 Once we have written the source for the SUT, we then compile the source and create an executable class
 file:
@@ -60,12 +61,31 @@ $ javac helloWorld.java
 
 Having created the SUT, we now create a Junit test called helloWorldUnitTest:
 ```bash
+=======
+[Source - helloWorld.java](helloWorld.java) 
+???
+A rather contrived example of a system under test...
+    
+---
+# The Unit Testing Code
+And then we create the unit testing code in the same directory 
+as the SUT:
+
+```shell
+>>>>>>> 6cff71843a541b65b117987c9d538b7216545740
 $ vim helloWorldUnitTest.java
 ...
 $
 ```
 
+<<<<<<< HEAD
 Which consists of the following code:
+=======
+---
+
+# The Unit Testing Code
+
+>>>>>>> 6cff71843a541b65b117987c9d538b7216545740
 ```java
 import org.junit.*;
 import static org.junit.Assert.*;
@@ -83,8 +103,13 @@ public class helloWorldUnitTest{
     public void testSayGoodbye(){
         helloWorld helloTest = new helloWorld();
         assertEquals("Goodbye", helloTest.sayGoodbye());
+<<<<<<< HEAD
     }
 
+=======
+    }	
+    
+>>>>>>> 6cff71843a541b65b117987c9d538b7216545740
     @Test
     public void testSayName(){
         String name = "Chester";
@@ -93,6 +118,7 @@ public class helloWorldUnitTest{
     }
 }
 ```
+<<<<<<< HEAD
 This code consists of three tests all of which invoke the Junit test method
 assertEquals which in this case tests the two parameters for equality.
 
@@ -153,3 +179,25 @@ FAILURES!!!
 Tests run: 3,  Failures: 1
 $
 ```
+=======
+---
+# Commentary on the Testing Code
+
+Line by line:
+1. Import of the java.unit module.
+2. Import of the static assert method.
+
+---
+    
+    
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+        var slideshow = remark.create({
+            highlightstyle: 'Zenburn'
+        });
+    </script>
+  </body>
+</html>
+>>>>>>> 6cff71843a541b65b117987c9d538b7216545740
