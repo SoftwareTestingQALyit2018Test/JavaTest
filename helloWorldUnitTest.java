@@ -14,8 +14,8 @@ public class helloWorldUnitTest{
     public void testSayGoodbye(){
         helloWorld helloTest = new helloWorld();
         assertEquals("Goodbye", helloTest.sayGoodbye());
-    }	
-    
+    }
+
     @Test
     public void testSayName(){
         String name = "Chester";

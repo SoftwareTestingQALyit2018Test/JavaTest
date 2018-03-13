@@ -10,12 +10,11 @@ public class helloWorld{
 	}
 
 	public String sayGoodbye(){
-		return ("Goodbye");
-	}	
-    
+		return ("goodbye");
+	}
+
     public String sayName(String name){
         this.name = name;
         return name;
     }
 }
-
