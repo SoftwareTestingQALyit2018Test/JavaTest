@@ -12,24 +12,23 @@ under test, and an accompanying JUnit 4 test.
 
 ## The System Under Test
 The first step is to create the SUT - in this simple example I will create and
-execute all commands from a bash shell:
+execute all commands from a `bash` shell:
 
 
-```shell
+```sh
 $ vim helloWorld.java
 ...
 $
 ```
 
-Where vim is a well known text-editor which is invoked with a single argument
+Where `vim` is a well known text-editor which is invoked with a single argument
 which the name of the Java source code.
 
-helloworld.java is the SUT element in this testing example and is very simple in
+`helloworld.java` is the SUT element in this testing example and is very simple in
 its behaviour:
 
 ```java
 import java.io.*;
-
 
 public class helloWorld{
 
@@ -49,43 +48,24 @@ public class helloWorld{
     }
 }
 ```
-<<<<<<< HEAD
 
 Once we have written the source for the SUT, we then compile the source and create an executable class
 file:
-```bash
+```sh
 $ javac helloWorld.java
 ```
 
 ## The Junit Test Code
 
 Having created the SUT, we now create a Junit test called helloWorldUnitTest:
-```bash
-=======
-[Source - helloWorld.java](helloWorld.java) 
-???
-A rather contrived example of a system under test...
-    
----
-# The Unit Testing Code
-And then we create the unit testing code in the same directory 
-as the SUT:
-
-```shell
->>>>>>> 6cff71843a541b65b117987c9d538b7216545740
-$ vim helloWorldUnitTest.java
+```sh
+$ vim helloWorldUnit.java
 ...
 $
 ```
 
-<<<<<<< HEAD
 Which consists of the following code:
-=======
----
 
-# The Unit Testing Code
-
->>>>>>> 6cff71843a541b65b117987c9d538b7216545740
 ```java
 import org.junit.*;
 import static org.junit.Assert.*;
@@ -103,13 +83,7 @@ public class helloWorldUnitTest{
     public void testSayGoodbye(){
         helloWorld helloTest = new helloWorld();
         assertEquals("Goodbye", helloTest.sayGoodbye());
-<<<<<<< HEAD
-    }
-
-=======
-    }	
-    
->>>>>>> 6cff71843a541b65b117987c9d538b7216545740
+	
     @Test
     public void testSayName(){
         String name = "Chester";
@@ -118,23 +92,23 @@ public class helloWorldUnitTest{
     }
 }
 ```
-<<<<<<< HEAD
+
 This code consists of three tests all of which invoke the Junit test method
-assertEquals which in this case tests the two parameters for equality.
+`assertEquals` which in this case tests the two parameters for equality.
 
 We then compile the Junit test code:
-```bash
+```sh
 $ javac -cp .:/usr/share/java/junit4.jar  helloWorldUnitTest.java
 ```
-Noting the use of the -cp or classpath flag to locate the Junit jar file for the
+Noting the use of the `-cp` or classpath flag to locate the Junit jar file for the
 compliler.
 
 
 ## Running the test from the command line
 
 We invoke the Junit test.
-```shell
-java -cp .:/usr/share/java/junit4.jar org.junit.runner.JUnitCore  helloWorldUnitTest
+```sh
+$ java -cp .:/usr/share/java/junit4.jar org.junit.runner.JUnitCore  helloWorldUnitTest
 JUnit version 4.12
 ...
 Time: 0.003
@@ -144,7 +118,7 @@ OK (3 tests)
 
 Again, note the use of the classpath to specify the location of the Junit jar file
 in the local file-system. We should also note the invocation of the
-org.junit.runner.JUnitCore class as the second argument to the java vm - this is
+`org.junit.runner.JUnitCore` class as the second argument to the java vm - this is
 the Junit class responsible for running tests.
 
 In this instance the SUT passed all three tests.
@@ -163,7 +137,7 @@ We then repeat the process above:
     2. And then rerun the JUnit test.
 
 We observe the output:
-```bash
+```sh
 $ java -cp .:/usr/share/java/junit4.jar org.junit.runner.JUnitCore  helloWorldUnitTest
 JUnit version 4.12
 ..E.
@@ -179,25 +153,4 @@ FAILURES!!!
 Tests run: 3,  Failures: 1
 $
 ```
-=======
----
-# Commentary on the Testing Code
 
-Line by line:
-1. Import of the java.unit module.
-2. Import of the static assert method.
-
----
-    
-    
-    </textarea>
-    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
-    </script>
-    <script>
-        var slideshow = remark.create({
-            highlightstyle: 'Zenburn'
-        });
-    </script>
-  </body>
-</html>
->>>>>>> 6cff71843a541b65b117987c9d538b7216545740
