@@ -125,7 +125,8 @@ In this instance the SUT passed all three tests.
 
 ## The SUT Fails...
 For the sake of completeness we make a minor alteration to the helloWorld class
-to make it fail one of the unit tests:
+to make it fail one of the unit tests, the lower case 'g' on the string
+'goodbye':
 
 ```java
     public String sayGoodbye(){
@@ -153,4 +154,10 @@ FAILURES!!!
 Tests run: 3,  Failures: 1
 $
 ```
+
+So, interesting questions to be resolved are:
+1. More realistic project organisation,
+2. How to use packages,
+3. How to use a build system such as Gradle.
+4. How to use git and github.
 
